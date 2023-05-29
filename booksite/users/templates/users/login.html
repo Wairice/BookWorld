@@ -1,0 +1,22 @@
+{% extends 'money/layout.html' %}
+
+{% block content %}
+<div class="alert successful">
+    <h1>Увійти</h1>
+    <style>
+        form {
+            margin: 0;
+        }
+    </style>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+        {% endfor %}
+        <button type="submit">Увійти</button>
+    </form>
+    <hr>
+
+    <p>Ще не зареєструвалися? <a href="{% url 'register' %}">Зробіть це тут</a></p>
+</div>
+{% endblock %}

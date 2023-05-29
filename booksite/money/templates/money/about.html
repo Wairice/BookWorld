@@ -1,0 +1,47 @@
+{% extends 'money/layout.html' %}
+
+{% block title %}Контакти{% endblock %}
+
+{% block content %}
+<style>
+    h1 {
+        margin-left: 23%;
+        margin-top: 15px;
+        color: crimson;
+    }
+
+    p {
+        margin-left: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    hr {
+        margin-left: 20%;
+        color: rgba(220, 20, 60, 0.96);
+        border-width: 5px;
+    }
+
+    .contact-info {
+        margin-left: 23%;
+        margin-top: 15px;
+        color: white;
+    }
+</style>
+
+<h1>Контакти</h1>
+<hr>
+
+<div class="contact-info">
+    <h3>Служба підтримки</h3>
+    <p>Якщо у вас виникли питання або потрібна допомога, будь ласка, зв'яжіться з нашою службою підтримки:</p>
+    <p>Електронна пошта: <a href="mailto:support@example.com">support@gmail.com</a></p>
+</div>
+<br><br>
+<div class="contact-info">
+    <h3>Телеграм</h3>
+    <p>Ви також можете зв'язатися з нами через Телеграм:</p>
+    <p>Наш канал: <a href="https://t.me/example_channel">t.me/support_channel</a></p>
+</div>
+
+{% endblock %}

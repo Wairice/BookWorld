@@ -1,0 +1,27 @@
+<style>
+    .btn-add-styled {
+        width: 100%;
+        height: 42px;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        white-space: nowrap;
+        color: #fff;
+        border-radius: 0;
+        background-color: #4d4d4d;
+    }
+
+    .btn-add-styled:hover {
+        background-color: rgba(77, 77, 77, 0.51);
+    }
+</style>
+
+
+<div>
+    {% if user.is_authenticated %}
+        <a class="btn btn-add-styled" href="{% url 'add_to_cart' books.id %}">Додати до кошика</a>
+    {% else %}
+        <a class="btn btn-add-styled" href="{% url 'home_regist' %}">Ви не увійшли у систему</a>
+    {% endif %}
+</div>

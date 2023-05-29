@@ -1,0 +1,33 @@
+<style>
+    .btn-styled {
+        width: 100%;
+        height: 55px;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        white-space: nowrap;
+        color: #fff;
+        border-radius: 10px;
+        background-color: #4d4d4d;
+    }
+
+    .btn-styled:hover {
+        background-color: rgba(77, 77, 77, 0.51);
+    }
+</style>
+
+{% if user.is_authenticated %}
+<div>
+    <a href="{% url 'cart' %}" style="font-size: 22px; overflow: hidden;text-overflow: ellipsis;"
+       class="btn btn-styled">
+        🛒: {{ user.username }}
+    </a>
+</div>
+{% else %}
+<div>
+    <a href="{% url 'home_regist' %}" style="font-size: 22px" class="btn btn-styled">
+        Login / Signin
+    </a>
+</div>
+{% endif %}

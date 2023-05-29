@@ -1,0 +1,13 @@
+{% extends 'money/layout.html' %}
+
+{% block content %}
+<br>
+<div class="alert successful">
+    <h1 style="text-align: center;">Ви вийшли з системи</h1><br>
+    <h3>Увійти знову?</h3>
+    <a href="{% url 'login' %}">---> Увійти</a> <br>
+    <a href="{% url 'home' %}"><--- Або повернутися на головну сторінку.</a>
+</div>
+
+
+{% endblock content %}

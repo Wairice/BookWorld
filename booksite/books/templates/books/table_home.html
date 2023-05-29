@@ -1,0 +1,35 @@
+<style>
+    .book-card {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 200px;
+        width: 350px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+</style>
+
+<div class="book-card">
+    <table>
+        <tr>
+            <td style="height: 55px; vertical-align: top">
+                <h5>{{ book.title }}</h5>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 70px; vertical-align: top">
+                <p>Автор: {{ book.author }}</p>
+                <p>Жанр: {{ book.get_genre_display }}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="{% url 'books-detail' book.pk %}" class="btn btn-warning"
+                   style="vertical-align: bottom">Детальніше
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

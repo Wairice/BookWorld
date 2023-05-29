@@ -1,0 +1,36 @@
+<table>
+    <thead>
+    <tr>
+        <th><label for="genreSelect" style="color: crimson">Жанр:</label></th>
+        <th><label for="searchInput" style="color: crimson">Пошук:</label></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <div class="form-group col-md-4" style="width: 80%">
+                <select class="form-control" id="genreSelect" name="genre">
+                    <option value="">Всі</option>
+                    <option value="fiction">Художня</option>
+                    <option value="nonfiction">Наукова</option>
+                    <option value="sci-fi">Наукова фантастика</option>
+                    <option value="fantasy">Фентезі</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <div class="form-group col-md-6" style="width: 80%">
+                <input type="text" class="form-control" id="searchInput" name="search"
+                       placeholder="Назва або автор">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="submit" style="margin: 0 auto" class="btn btn-primary">Фільтрувати</button>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+

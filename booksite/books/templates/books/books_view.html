@@ -1,0 +1,48 @@
+{% extends 'money/layout.html' %}
+
+{% block title %}{{ books.title }}{% endblock %}
+
+{% block content %}
+<style>
+    table {
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        min-height: 300px;
+        margin-top: 50px;
+    }
+
+    td,
+    th {
+        border: 0;
+    }
+
+    .book-image {
+        max-width: 200px;
+        max-height: 300px;
+    }
+
+</style>
+
+<div class="content">
+    <table>
+        <tr>
+            <td rowspan="2" style="background: black; color: #ffffff;  vertical-align: top; width: 200px">
+                <h2>{{ books.title }}</h2>
+            </td>
+            <td style="background: white; vertical-align: top; height: 6px">{{ books.date }}<br>{{ books.author }}</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="background: white; vertical-align: top;">{{ books.full_text }}</td>
+        </tr>
+        <tr>
+            <td style="background: black;  vertical-align: bottom; color: rgb(134,134,134); height: 100px">
+                Ціна: {{ books.priсe }} ₴ <br>
+                Код товару: {{ books.id }}
+                {% include 'books/btn_add.html' %}
+            </td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

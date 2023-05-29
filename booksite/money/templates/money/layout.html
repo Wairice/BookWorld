@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{% static 'money/css/money.css' %}">
+
+</head>
+<body>
+    <aside>
+        <picture>
+            <img src="{% static 'money/img/symbol.jpg' %}" alt="logo">
+        </picture>
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+        <h3>Навігація 🧭</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li>Головна</li></a>
+            <a href="{% url 'books_home' %}"><li>Книжки</li></a>
+            <a href="{% url 'home_regist' %}"><li>Профіль</li></a>
+            <a href="{% url 'about' %}"><li>Контакти</li></a>
+        </ul>
+        {% include 'users/btn_regist.html' %}
+
+    </aside>
+
+    <main>
+        {% block content %}
+	    {% endblock %}
+    </main>
+</body>
+</html>

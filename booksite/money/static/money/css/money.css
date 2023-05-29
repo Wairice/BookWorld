@@ -1,0 +1,123 @@
+body {
+    background: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+}
+
+
+aside picture img {
+    width: 292px;
+    float: left;
+    margin-left: -38px;
+    margin-top: -38px;
+}
+
+aside a img {
+    width: 25px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+
+aside ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+aside ul li {
+    color: white;
+    display: block;
+    margin-top: 20px;
+    margin-left: -20px;
+    text-decoration: none;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: crimson;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .content {
+    display: table;
+    width: 700px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 23%;
+}
+
+
+main .features {
+    float: left;
+    color: white;
+    height: 100px;
+    margin-left: 21%;
+    text-align: left;
+}
+
+main .features p {
+    max-width: 400px;
+    max-height: 500px;
+    margin: 10px auto;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 350px;
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.successful {
+    margin-left: 23%;
+    width: 600px;
+    margin-top: 25px;
+    background: #2c2c2c;
+    color: crimson;
+    border-right: none;
+}
+
+.successful a {
+    text-decoration: none;
+}
+
+.successful form {
+    margin-left: 0;
+}
+
+
+.btn-info {
+    background: crimson;
+    border: crimson;
+}
+
+form {
+    margin-left: 28%;
+    width: 500px;
+    margin-top: 50px;
+}

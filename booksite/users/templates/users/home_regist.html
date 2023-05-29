@@ -1,0 +1,17 @@
+{% extends 'money/layout.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <div class="alert successful">
+        <h1>Вітаю {{ user.username }}!</h1>
+        <a href="{% url 'logout' %}" style="font-size: 22px;">Вийти?</a>
+    </div>
+    {% else %}
+    <div class="alert successful">
+        <h1>Вітаю!</h1>
+        <a href="{% url 'register' %}" style="font-size: 22px;">Зареєструватися</a><br>
+        <a href="{% url 'login' %}" style="font-size: 22px;">Увійти</a>
+    </div>
+    {% endif %}
+{% endblock %}
+
